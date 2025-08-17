@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@arco-design/web-vue": "^2.57.0",
+    "monaco-editor-webpack-plugin": "^7.1.0"
+  }
+}

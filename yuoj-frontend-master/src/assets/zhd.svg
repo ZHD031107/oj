@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+    <defs>
+        <filter id="blur-effect" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" />
+        </filter>
+
+        <radialGradient id="main-glow" cx="50%" cy="50%" r="65%" fx="40%" fy="40%">
+            <stop offset="0%" stop-color="#64b5f6" stop-opacity="0.9" />
+            <stop offset="100%" stop-color="#1976d2" stop-opacity="0.7" />
+        </radialGradient>
+
+        <radialGradient id="highlight" cx="30%" cy="30%" r="70%" fx="30%" fy="30%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+        </radialGradient>
+
+        <radialGradient id="accent-glow" cx="70%" cy="70%" r="50%" fx="70%" fy="70%">
+            <stop offset="0%" stop-color="#4fc3f7" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#29b6f6" stop-opacity="0.2" />
+        </radialGradient>
+
+        <linearGradient id="z-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e3f2fd" />
+            <stop offset="100%" stop-color="#bbdefb" />
+        </linearGradient>
+    </defs>
+
+    <!-- 底部光晕 -->
+    <ellipse cx="250" cy="400" rx="160" ry="50" fill="#1976d2" filter="url(#blur-effect)" opacity="0.6" />
+
+    <!-- 主体形状 - 融合字母Z的抽象波浪 -->
+    <path d="M 150,250
+             C 100,200 100,150 150,100
+             L 350,100
+             C 400,150 400,200 350,250
+             C 400,300 400,350 350,400
+             L 150,400
+             C 100,350 100,300 150,250 Z"
+          fill="url(#main-glow)" />
+
+    <!-- 高光效果 -->
+    <path d="M 150,250
+             C 100,200 100,150 150,100
+             L 350,100
+             C 400,150 400,200 350,250
+             C 400,300 400,350 350,400
+             L 150,400
+             C 100,350 100,300 150,250 Z"
+          fill="url(#highlight)" opacity="0.4" />
+
+    <!-- 字母Z造型 -->
+    <path d="M 180,150 L 320,150 L 180,350 L 320,350"
+          stroke="url(#z-gradient)"
+          stroke-width="20"
+          stroke-linecap="round"
+          fill="none" />
+
+    <!-- 装饰光点 -->
+    <circle cx="220" cy="200" r="15" fill="url(#accent-glow)" opacity="0.9" />
+    <circle cx="280" cy="300" r="12" fill="url(#accent-glow)" opacity="0.9" />
+</svg>
